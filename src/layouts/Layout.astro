@@ -7,10 +7,10 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -20,8 +20,10 @@ const { title } = Astro.props;
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 	</head>
-	<body class="antialiased bg-cream text-charcoal selection:bg-gold-medium/20 selection:text-charcoal">
-		<slot />
+	<body class="antialiased bg-cream text-charcoal selection:bg-gold-medium/20 selection:text-charcoal overflow-x-hidden w-full">
+		<div class="overflow-x-hidden w-full min-h-screen flex flex-col">
+			<slot />
+		</div>
 		
 		<style is:global>
 			body { font-family: 'Inter', sans-serif; }
