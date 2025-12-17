@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Hero from '../components/Hero.astro';
+import Marquee from '../components/Marquee.astro';
+import Strategy from '../components/Strategy.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Suitability from '../components/Suitability.astro';
+import Impact from '../components/Impact.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Solaris Tax | Strategic Solar Investments">
+	<Hero>
+		<Header client:load slot="header" isDark={true} />
+	</Hero>
+	<Marquee />
+	<HowItWorks />
+	<Strategy />
+	<Suitability />
+	<Impact />
+	<Testimonials />
+	<CTA />
+	<Footer />
+</Layout>
+

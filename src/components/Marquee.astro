@@ -1,0 +1,28 @@
+---
+import { Marquee } from "./ui/marquee";
+
+const complianceItems = [
+    "IRC Section 48",
+    "Inflation Reduction Act",
+    "MACRS Depreciation",
+    "Form 3468",
+    "Passive Activity Rules",
+    "Solar Investment Tax Credit",
+    "Schedule K-1"
+];
+---
+<section class="bg-cream border-gold-light/20 border-b py-12 relative overflow-hidden flex flex-col items-center">
+    <p class="text-center text-[10px] uppercase tracking-[0.25em] text-charcoal/40 mb-4 relative z-10 bg-cream px-4">Frameworks & Compliance</p>
+    
+    <!-- Gradient Masks for Smooth Fade -->
+    <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-cream to-transparent z-20 pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-cream to-transparent z-20 pointer-events-none"></div>
+
+    <Marquee client:load pauseOnHover={true} speed={60} className="py-4 [--gap:4rem]">
+        {complianceItems.map((item) => (
+            <div className="text-charcoal/30 font-medium text-xl tracking-wide cursor-default select-none hover:text-gold-rich transition-colors duration-300 whitespace-nowrap px-4">
+                {item}
+            </div>
+        ))}
+    </Marquee>
+</section>
